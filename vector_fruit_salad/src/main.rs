@@ -10,7 +10,7 @@ fn main() {
         if i != fruit.len() - 1 {
             print!("{}, ", item);
         } else {
-            println!("{}.", item);
+            println!("{}", item);
         }
     }
 }
