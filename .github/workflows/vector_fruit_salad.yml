@@ -15,12 +15,16 @@ env:
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
 
     steps:
     - uses: actions/checkout@v3
+    - name: Install Rust
+      run: curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
     - name: Build
       run: cargo build --verbose
+      working-directory: vector_fruit_salad
     - name: Run tests
       run: cargo test --verbose
+      working-directory: vector_fruit_salad
+
