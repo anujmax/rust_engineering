@@ -1,10 +1,14 @@
-name: Rust
+name: vector_fruit_salad
 
 on:
   push:
     branches: [ "main" ]
+    paths: 
+      - 'vector_fruit_salad/**'
   pull_request:
     branches: [ "main" ]
+    paths: 
+      - 'vector_fruit_salad/**'
 
 env:
   CARGO_TERM_COLOR: always
